@@ -2,50 +2,86 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-  min-height: 100vh;      /* Full screen height */
-  padding: 4rem 2rem;     /* Top & side padding */
-  background: linear-gradient(to bottom right, #0f0f1c, #141425);
-  box-sizing: border-box; /* Important to include padding in height */
+  text-align: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+
+  background: linear-gradient(-45deg, #0f0f1c, #141425, #0f0f1c, #141425);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
 }
 
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-.home-text {
-  flex: 1 1 300px;
-  max-width: 600px;
+.welcome-line {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home-content {
+  max-width: 800px;
 }
 
 .home-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .home-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 300;
+  margin-bottom: 2rem;
 }
 
-.home-photo {
-  flex: 0 0 250px; /* Fixed size container for image */
+.btn-primary {
+  display: inline-block;
+  background: #00bcd4;
+  color: #0f0f1c;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.home-image {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 50%;
-  box-shadow: 
-    10px 0 30px rgba(0, 0, 0, 0.4),   /* Right side: soft black */
-    0 10px 30px rgba(0, 0, 0, 0.4),   /* Bottom */
-    0 -10px 30px rgba(0, 0, 0, 0.4),  /* Top */
-    -5px 0 10px rgba(0, 0, 0, 0.2);   /* Subtle left */
+.btn-primary:hover {
+  background: #019cb3;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
 }

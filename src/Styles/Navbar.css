@@ -1,14 +1,17 @@
 /* Navbar.css */
 
 .navbar {
-  background: #0d0d1f; /* dark background */
+  background: rgba(13, 13, 31, 0.6); /* dark + semi-transparent */
+  backdrop-filter: blur(6px); /* frosted glass effect */
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* soft shadow for depth */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .navbar-container {
   max-width: 1200px;

@@ -22,8 +22,9 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
-  justify-items:center;
+  justify-items: center;
 }
+
 @media (max-width: 1200px) {
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -43,18 +44,23 @@
 }
 
 .skill-card {
+  position: relative; /* ✅ Needed for absolute button */
   background: #1a1a2e;
   border-radius: 12px;
   padding: 2rem 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-width: 140px;
-  
+  overflow: hidden; /* Keeps button inside card */
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: center;
 }
+
+/* ✅ Only cards with hover button get min-height */
+
 
 .skill-card:hover {
   transform: scale(1.05);
@@ -66,4 +72,26 @@
   width: 70px;
   height: 70px;
   margin-bottom: 1rem;
+}
+
+.skill-hover-button {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00bcd4;
+  color: #0f0f1c;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover .skill-hover-button {
+  opacity: 1;
+  pointer-events: auto;
 }

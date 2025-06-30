@@ -24,7 +24,7 @@ const skillsData = [
   },
   {
     name: 'Tailwind CSS',
-    icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original-wordmark.svg',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
   },
   {
     name: 'jQuery',
@@ -33,6 +33,7 @@ const skillsData = [
   {
     name: 'Git',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    link: 'https://github.com/santhosh-2906', // ✅ Only Git has a link!
   },
   {
     name: 'MySQL',
@@ -51,13 +52,26 @@ const Skills = () => {
       <div className="skills-container">
         <div className="skills-grid">
           {skillsData.map((skill, index) => (
-            <div className="skill-card" key={index}>
+            <div
+              className={`skill-card ${skill.link ? 'has-link' : ''}`}
+              key={index}
+            >
               <img
                 src={skill.icon}
                 alt={skill.name}
                 className="skill-icon"
               />
               <p>{skill.name}</p>
+              {skill.link && (
+                <a
+                  href={skill.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="skill-hover-button"
+                >
+                  Visit GitHub
+                </a>
+              )}
             </div>
           ))}
         </div>
