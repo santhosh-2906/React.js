@@ -64,7 +64,7 @@
 
 .skill-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.2);
   border: 1px solid #4fc3f7;
 }
 
@@ -79,7 +79,7 @@
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  background: #00bcd4;
+  background: linear-gradient(135deg, #00e5ff, #1de9b6);
   color: #0f0f1c;
   padding: 0.4rem 1rem;
   border-radius: 6px;
@@ -94,4 +94,5 @@
 .skill-card:hover .skill-hover-button {
   opacity: 1;
   pointer-events: auto;
+    transform: translateX(-50%) translateY(-4px);
 }

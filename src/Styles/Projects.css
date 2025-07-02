@@ -34,7 +34,7 @@
 
 .project-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 36px rgba(0, 188, 212, 0.2);
 }
 
 .project-card::before {
