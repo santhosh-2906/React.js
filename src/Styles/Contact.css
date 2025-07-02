@@ -96,7 +96,7 @@
   transform: scale(0.98);
 }
 
-/* Optional: make button full width on very small screens */
+
 @media (max-width: 500px) {
   .contact-form button {
     width: 100%;

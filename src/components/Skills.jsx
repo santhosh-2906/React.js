@@ -33,7 +33,7 @@ const skillsData = [
   {
     name: 'Git',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-    link: 'https://github.com/santhosh-2906', // ✅ Only Git has a link!
+    link: 'https://github.com/santhosh-2906',
   },
   {
     name: 'MySQL',

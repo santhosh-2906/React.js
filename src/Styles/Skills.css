@@ -1,6 +1,6 @@
 .skills {
   padding: 6rem 2rem;
-  background: #0d0d1f; /* main dark page background */
+  background: #0d0d1f;
   color: #fff;
 }
 
@@ -11,11 +11,11 @@
 }
 
 .skills-container {
-  background: #161625;  /* separate card look */
+  background: #161625; 
   border-radius: 12px;
   padding: 3rem 2rem;
   max-width: 1200px;
-  margin: 0 auto;  /* center */
+  margin: 0 auto; 
 }
 
 .skills-grid {
@@ -44,14 +44,14 @@
 }
 
 .skill-card {
-  position: relative; /* ✅ Needed for absolute button */
+  position: relative; 
   background: #1a1a2e;
   border-radius: 12px;
   padding: 2rem 1rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-width: 140px;
-  overflow: hidden; /* Keeps button inside card */
+  overflow: hidden; 
 
   display: flex;
   flex-direction: column;
@@ -59,7 +59,6 @@
   justify-self: center;
 }
 
-/* ✅ Only cards with hover button get min-height */
 
 
 .skill-card:hover {

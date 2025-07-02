@@ -1,6 +1,6 @@
 .projects {
   padding: 4rem 2rem;
-  max-width: 1000px;   /* ✅ keep layout tidy */
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -27,9 +27,9 @@
   align-items: flex-end;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  max-width: 350px;  /* ✅ cap max card width */
+  max-width: 350px;
   width: 100%;
-  margin: 0 auto;    /* ✅ center card inside grid cell */
+  margin: 0 auto;
 }
 
 .project-card:hover {
